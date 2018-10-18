@@ -7,16 +7,23 @@ import { HeaderComponent } from './header/header.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 
-import { HttpClientModele } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 
 import { MovieService } from './movie.service';
+import { HomeComponent } from './home/home.component';
+import { MovieComponent } from './movie/movie.component';
 
+const appRoutes: Routes = [
+  { path: '', component: HomeComponent }
+]
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    HomeComponent,
+    MovieComponent
   ],
   imports: [
     BrowserModule,
