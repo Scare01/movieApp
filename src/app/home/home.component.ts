@@ -11,6 +11,7 @@ export class HomeComponent implements OnInit {
   upcoming_movies: any;
   search_result: any;
   movie: any;
+  genres: any;
 
   constructor(private movieService: MovieService) {
 
@@ -18,7 +19,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.movieService.getPopularMovies().subscribe(data => { this.popular_movies = data['results'] })
-
+    this.movieService.getGenres().subscribe(data => { this.genres = data['genres'] })
   }
 
 }

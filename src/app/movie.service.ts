@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class MovieService {
-  private movie_url = 'http://api.themoviedb.org/3/';
+  private movie_url = 'https://api.themoviedb.org/3/';
   private api_key = '8f2490decc0a336ae87db98a12a29a59';
   private movie_string: string;
   private id: number;
@@ -14,6 +14,14 @@ export class MovieService {
 
   getPopularMovies() {
     return this.http.get(this.movie_url + 'discover/movie?sort_by=popularity.desc' + '&api_key=' + this.api_key);
+  }
+
+  getGenres() {
+    return this.http.get(this.movie_url + 'genre/movie/list?api_key=' + this.api_key);
+  }
+
+  getMovie(id: number) {
+    return this.http.get(this.movie_url + 'movie/' + id + '?api_key=' + this.api_key)
   }
 
 

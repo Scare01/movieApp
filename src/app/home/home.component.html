@@ -1,7 +1,12 @@
 <div *ngFor="let popular of popular_movies">
   <div id='movie'>
     <p> {{popular.title}}</p>
+    <ul>
+      <li *ngFor="let genre_id of popular.genre_ids">
+        {{genre_id}}
+      </li>
+    </ul>
     <img src="https://image.tmdb.org/t/p/w500/{{ popular.poster_path }}" id="img">
+    <a routerLink="/movie/{{popular.id}}">Details</a>
   </div>
-
 </div>

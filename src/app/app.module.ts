@@ -13,9 +13,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { MovieService } from './movie.service';
 import { HomeComponent } from './home/home.component';
 import { MovieComponent } from './movie/movie.component';
+import { MovieDetailComponent } from './movie-detail/movie-detail.component';
+
 
 const appRoutes: Routes = [
-  { path: '', component: HomeComponent }
+  { path: '', component: HomeComponent },
+  { path: 'movie/:movieID', component: MovieDetailComponent }
 ]
 
 @NgModule({
@@ -23,7 +26,8 @@ const appRoutes: Routes = [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    MovieComponent
+    MovieComponent,
+    MovieDetailComponent
   ],
   imports: [
     BrowserModule,
