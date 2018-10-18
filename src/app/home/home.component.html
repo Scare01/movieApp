@@ -1,12 +1,17 @@
-<div *ngFor="let popular of popular_movies">
-  <div id='movie'>
-    <p> {{popular.title}}</p>
-    <ul>
-      <li *ngFor="let genre_id of popular.genre_ids">
-        {{genre_id}}
-      </li>
-    </ul>
-    <img src="https://image.tmdb.org/t/p/w500/{{ popular.poster_path }}" id="img">
-    <a routerLink="/movie/{{popular.id}}">Details</a>
-  </div>
+<div id="content">
+  <mat-card *ngFor="let popular of popular_movies" class="card">
+    <mat-card-header>
+      <mat-card-title>{{popular.title}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="https://image.tmdb.org/t/p/w500/{{ popular.poster_path }}">
+    <mat-card-content>
+      <p>{{popular.overview}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>Add to favorite</button>
+      <a mat-button routerLink="/movie/{{popular.id}}">Details</a>
+
+    </mat-card-actions>
+  </mat-card>
+
 </div>

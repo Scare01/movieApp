@@ -1,8 +1,26 @@
-#movie {
-  border: 1px solid black;
+#content {
+  width: 80%;
+  margin: 10px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-#img {
-  width: 200px;
-  height: 200px;
+.card {
+  margin: 20px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card mat-card-actions {
+  align-self: center;
+}
+
+.card mat-card-header {
+  align-self: center;
+}
+
+.card mat-card-title {
+  font-size: 2em;
 }

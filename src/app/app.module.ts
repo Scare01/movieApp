@@ -7,12 +7,15 @@ import { HeaderComponent } from './header/header.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 
+import { MatCardModule } from '@angular/material/card';
+
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 
 import { MovieService } from './movie.service';
 import { HomeComponent } from './home/home.component';
 import { MovieComponent } from './movie/movie.component';
+
 import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 
 
@@ -39,7 +42,8 @@ const appRoutes: Routes = [
     MatIconModule,
     MatListModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    MatCardModule
   ],
   providers: [MovieService],
   bootstrap: [AppComponent]

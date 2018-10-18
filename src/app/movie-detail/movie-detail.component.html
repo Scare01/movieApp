@@ -1,3 +1,14 @@
-<p>{{movie.original_title}}</p>
+<mat-card *ngFor="let popular of popular_movies" class="card">
+  <mat-card-header>
+    <mat-card-title>{{movie.origin_title}}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}">
+  <mat-card-content>
+    <p>{{movie.overview}}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button (click)="goBack()">go back</button>
 
-<button (click)="goBack()">go back</button>
+
+  </mat-card-actions>
+</mat-card>
