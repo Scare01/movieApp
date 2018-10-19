@@ -26,4 +26,8 @@ export class MovieService {
     return this.http.get(this.movie_url + 'movie/' + id + '/recommendations?api_key=' + this.api_key);
   }
 
+  getSearchMovie(query: string) {
+    return this.http.get(this.movie_url + 'search/movie?api_key=' + this.api_key + '&query=' + query);
+  }
+
 }
