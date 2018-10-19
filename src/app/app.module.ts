@@ -8,6 +8,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 
 import { MatCardModule } from '@angular/material/card';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
@@ -43,7 +44,8 @@ const appRoutes: Routes = [
     MatListModule,
     HttpClientModule,
     RouterModule.forRoot(appRoutes),
-    MatCardModule
+    MatCardModule,
+    MatGridListModule
   ],
   providers: [MovieService],
   bootstrap: [AppComponent]

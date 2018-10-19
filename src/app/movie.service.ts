@@ -16,13 +16,14 @@ export class MovieService {
     return this.http.get(this.movie_url + 'discover/movie?sort_by=popularity.desc' + '&api_key=' + this.api_key);
   }
 
-  getGenres() {
-    return this.http.get(this.movie_url + 'genre/movie/list?api_key=' + this.api_key);
-  }
+
 
   getMovie(id: number) {
-    return this.http.get(this.movie_url + 'movie/' + id + '?api_key=' + this.api_key)
+    return this.http.get(this.movie_url + 'movie/' + id + '?api_key=' + this.api_key);
   }
 
+  getRecommendations(id: number) {
+    return this.http.get(this.movie_url + 'movie/' + id + '/recommendations?api_key=' + this.api_key);
+  }
 
 }

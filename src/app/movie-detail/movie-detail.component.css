@@ -1,0 +1,86 @@
+#main {
+  display: flex;
+  flex-direction: column;
+}
+
+#content {
+  width: 90%;
+  margin: 0 auto;
+  font-size: 1.3em;
+}
+
+#content img {
+  float: left;
+  margin: 10px;
+  width: 500px;
+  height: 750px;
+}
+
+#details {
+  margin: 10px auto;
+  float: left;
+  width: 50%;
+}
+
+#details ul {
+  list-style: none;
+}
+
+#details ul li {
+  margin-left: 5%;
+}
+
+#title {
+  font-size: 3em;
+  text-align: center;
+}
+
+#genre hr {
+  width: 15%;
+  margin-top: 2px;
+  margin-bottom: 5px;
+}
+
+#prod_companies hr {
+  width: 35%;
+  margin-top: 2px;
+  margin-bottom: 5px;
+}
+
+#prod_countries hr {
+  width: 35%;
+  margin-top: 2px;
+  margin-bottom: 5px;
+}
+
+#recomendations {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#recomend_head {
+  text-align: center;
+}
+
+#recomend_movies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.recommend_movie {
+  width: 250px;
+  height: 450px;
+  border: 1px solid black;
+  margin: 10px;
+}
+
+.recommend_movie img {
+  width: 250px;
+}
+
+#recommend_controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}

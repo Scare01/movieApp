@@ -1,14 +1,62 @@
-<mat-card *ngFor="let popular of popular_movies" class="card">
-  <mat-card-header>
-    <mat-card-title>{{movie.origin_title}}</mat-card-title>
-  </mat-card-header>
-  <img mat-card-image src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}">
-  <mat-card-content>
-    <p>{{movie.overview}}</p>
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-button (click)="goBack()">go back</button>
+<div id="main">
+  <div id="content">
+    <img mat-card-image src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}">
+    <div id="details">
+      <div id="title">{{movie.title}}</div>
+      <hr style="width: 50%; margin-top: 0;">
+      <div id="overview">{{movie.overview}}</div>
+      <div id="genre">
+        <ul>
+          Genre:
+          <li *ngFor="let genre of movie.genres">
+            {{genre.name}}
+          </li>
+        </ul>
+      </div>
+      <div id="prod_companies">
+        <ul>
+          Prodaction companies:
+          <li *ngFor="let company of movie.production_companies">
+            {{company.name}}
+          </li>
+        </ul>
+      </div>
+      <div id="prod_countries">
+        <ul>
+          Prodaction contries:
+          <li *ngFor="let country of movie.production_countries">
+            {{country.name}}
+          </li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          Runtime:
+          <li>{{movie.runtime}} min</li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          Vote average:
+          <li>{{movie.vote_average}}</li>
+        </ul>
+      </div>
+      <div>
+        <a mat-button href="{{movie.homepage}}">Movie homepage</a>
+        <button mat-button (click)="goBack()">Back</button>
+      </div>
+    </div>
 
+  </div>
+  <div id="recomendations">
+    <h2 id="recomend_head">Recommendations:</h2>
+    <div id="recomend_movies">
+      <div *ngFor="let recommendation of recommendations" class="recommend_movie">
+        <img mat-card-image src="https://image.tmdb.org/t/p/w500/{{ recommendation.poster_path }}">
+        <div id="recommend_controls">
+          <h4><a mat-button routerLink="/movie/{{recommendation.id}}">{{recommendation.title}}</a></h4>
+        </div>
+      </div>
+    </div>
 
-  </mat-card-actions>
-</mat-card>
+  </div>

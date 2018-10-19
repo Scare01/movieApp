@@ -1,9 +1,9 @@
 <div id="content">
   <mat-card *ngFor="let popular of popular_movies" class="card">
+    <img mat-card-image src="https://image.tmdb.org/t/p/w500/{{ popular.poster_path }}">
     <mat-card-header>
       <mat-card-title>{{popular.title}}</mat-card-title>
     </mat-card-header>
-    <img mat-card-image src="https://image.tmdb.org/t/p/w500/{{ popular.poster_path }}">
     <mat-card-content>
       <p>{{popular.overview}}</p>
     </mat-card-content>
