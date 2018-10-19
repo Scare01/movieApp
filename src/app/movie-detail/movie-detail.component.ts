@@ -22,6 +22,9 @@ export class MovieDetailComponent implements OnInit {
     this.movieService.getRecommendations(id).subscribe(data => this.recommendations = data['results']);
   }
 
+  pageReload() {
+    this.location.reload();
+  }
 
   goBack() {
     this.location.back();

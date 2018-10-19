@@ -54,7 +54,7 @@
       <div *ngFor="let recommendation of recommendations" class="recommend_movie">
         <img mat-card-image src="https://image.tmdb.org/t/p/w500/{{ recommendation.poster_path }}">
         <div id="recommend_controls">
-          <h4><a mat-button routerLink="/movie/{{recommendation.id}}">{{recommendation.title}}</a></h4>
+          <h4><a mat-button routerLink="/movie/{{recommendation.id}}" (click)="pageReload()">{{recommendation.title}}</a></h4>
         </div>
       </div>
     </div>
