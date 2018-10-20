@@ -41,8 +41,12 @@
         </ul>
       </div>
       <div>
-        <a mat-button href="{{movie.homepage}}">Movie homepage</a>
-        <button mat-button (click)="goBack()">Back</button>
+        <ul>
+          <li>
+            <a mat-button href="{{movie.homepage}}">Movie homepage</a>
+            <a mat-button routerLink="">home</a>
+          </li>
+        </ul>
       </div>
     </div>
 
