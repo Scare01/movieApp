@@ -9,6 +9,7 @@ import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, Mat
 
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatInputModule } from '@angular/material/input';
 
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
@@ -19,6 +20,8 @@ import { MovieComponent } from './movie/movie.component';
 
 import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 import { SearchMovieComponent } from './search-movie/search-movie.component';
+
+import { FormsModule } from '@angular/forms';
 
 
 const appRoutes: Routes = [
@@ -48,7 +51,9 @@ const appRoutes: Routes = [
     HttpClientModule,
     RouterModule.forRoot(appRoutes),
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
+    MatInputModule,
+    FormsModule
   ],
   providers: [MovieService],
   bootstrap: [AppComponent]

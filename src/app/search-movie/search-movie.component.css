@@ -1,0 +1,55 @@
+#main_search {
+  width: 90%;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#search_controls {
+  margin: 10px auto;
+  align-items: center;
+}
+
+#search_button {
+  margin-left: 10px;
+}
+
+#search_results {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#search_results {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#search_head {
+  text-align: center;
+}
+
+#search_movies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.search_movie {
+  width: 200px;
+  height: auto;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.search_movie img {
+  width: 200px;
+  height: 300px;
+}
+
+#search_controls_movie {
+  text-align: center;
+  word-wrap: break-word;
+  width: 100%;
+}

@@ -1,0 +1,20 @@
+<div id="main_search">
+  <form id="search_controls">
+    <mat-form-field>
+      <input matInput type='text' placeholder="movie" name='movie' [(ngModel)]="movie">
+    </mat-form-field>
+    <button mat-button (click)="searchMovie()" id="search_button">Search</button>
+  </form>
+  <div id="search_results">
+    <h2 id="search_head">Search results:</h2>
+    <div id="search_movies">
+      <div *ngFor="let movie of search_results" class="search_movie">
+        <img mat-card-image src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}">
+        <div id="search_controls_movie">
+          <h4>{{movie.title}}</h4>
+          <a mat-button routerLink="/movie/{{movie.id}}" (click)="pageReload()">Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

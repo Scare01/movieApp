@@ -69,17 +69,20 @@
 }
 
 .recommend_movie {
-  width: 250px;
-  height: 450px;
+  width: 200px;
+  height: auto;
   margin: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .recommend_movie img {
-  width: 250px;
+  width: 200px;
+  height: 300px;
 }
 
 #recommend_controls {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  text-align: center;
+  word-wrap: break-word;
+  width: 100%;
 }
