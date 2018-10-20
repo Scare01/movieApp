@@ -14,7 +14,7 @@ export class HeaderComponent {
     .pipe(
       map(result => result.matches)
     );
-    
-  constructor(private breakpointObserver: BreakpointObserver) {}
-  
-  }
+
+  constructor(private breakpointObserver: BreakpointObserver) { }
+
+}

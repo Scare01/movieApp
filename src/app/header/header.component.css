@@ -10,3 +10,9 @@ a {
   text-decoration: none;
   color: white;
 }
+
+#search-button {
+  margin-left: 10px;
+  background-color: white;
+  color: black;
+}

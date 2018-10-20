@@ -4,7 +4,8 @@
   </span>
   <span class="spacer"></span>
 
-  <input type="search" placeholder="Search movie" id="search">
-  <button id="search-button">Search</button>
+
+  <input type="search" placeholder="Search movie" id="search" value=''>
+  <a mat-button routerLink="/search_result" (click)="clickSeach()" id="search-button">Search</a>
 
 </mat-toolbar>

@@ -18,11 +18,13 @@ import { HomeComponent } from './home/home.component';
 import { MovieComponent } from './movie/movie.component';
 
 import { MovieDetailComponent } from './movie-detail/movie-detail.component';
+import { SearchMovieComponent } from './search-movie/search-movie.component';
 
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'movie/:movieID', component: MovieDetailComponent }
+  { path: 'movie/:movieID', component: MovieDetailComponent },
+  { path: 'search_result', component: SearchMovieComponent }
 ]
 
 @NgModule({
@@ -31,7 +33,8 @@ const appRoutes: Routes = [
     HeaderComponent,
     HomeComponent,
     MovieComponent,
-    MovieDetailComponent
+    MovieDetailComponent,
+    SearchMovieComponent
   ],
   imports: [
     BrowserModule,
