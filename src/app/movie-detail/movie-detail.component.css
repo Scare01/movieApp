@@ -3,6 +3,10 @@
   flex-direction: column;
 }
 
+a {
+  margin: 5px;
+}
+
 #content {
   width: 90%;
   margin: 0 auto;
