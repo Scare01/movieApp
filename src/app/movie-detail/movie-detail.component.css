@@ -62,9 +62,8 @@ a {
 #recomendations {
   width: 90%;
   margin: 0 auto;
-}
-
-#recomend_head {
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
 
@@ -72,23 +71,21 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  margin: 5px;
+  padding: 5px;
 }
 
 .recommend_movie {
+  display: flex;
   width: 200px;
   height: auto;
   margin: 10px;
-  display: flex;
   flex-direction: column;
+  text-align: center;
+  word-wrap: break-word;
 }
 
 .recommend_movie img {
   width: 200px;
   height: 300px;
-}
-
-#recommend_controls {
-  text-align: center;
-  word-wrap: break-word;
-  width: 100%;
 }

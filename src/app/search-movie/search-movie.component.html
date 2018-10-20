@@ -9,11 +9,8 @@
     <h2 id="search_head">Search results:</h2>
     <div id="search_movies">
       <div *ngFor="let movie of search_results" class="search_movie">
-        <img mat-card-image src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}">
-        <div id="search_controls_movie">
-          <h4>{{movie.title}}</h4>
-          <a mat-button routerLink="/movie/{{movie.id}}" (click)="pageReload()">Details</a>
-        </div>
+        <img src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}">
+        <a mat-button routerLink="/movie/{{movie.id}}" (click)="pageReload()">Details</a>
       </div>
     </div>
   </div>
