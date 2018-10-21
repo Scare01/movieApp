@@ -10,6 +10,7 @@
           <li *ngFor="let genre of movie.genres">
             {{genre.name}}
           </li>
+
         </ul>
       </div>
       <div id="prod_companies">
@@ -40,11 +41,16 @@
           <li>{{movie.vote_average}}</li>
         </ul>
       </div>
+      <!--  <div>
+        <ul>
+          <li><button mat-button (click)="addFavorites()">Add to favorite</button></li>
+        </ul>
+      </div>
+  -->
       <div>
         <ul>
           <li>
             <a mat-button href="{{movie.homepage}}">Movie homepage</a>
-            <a mat-button routerLink="">Add to favorite</a>
             <a mat-button routerLink="">home</a>
           </li>
         </ul>

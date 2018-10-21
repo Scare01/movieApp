@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 import { MovieService } from '../movie.service';
-import { Location } from '@angular/common';
+
 
 
 @Component({
@@ -14,7 +14,8 @@ export class MovieDetailComponent implements OnInit {
   movie: any;
   recommendations: any;
 
-  constructor(private router: ActivatedRoute, private movieService: MovieService, private location: Location) { }
+
+  constructor(private router: ActivatedRoute, private movieService: MovieService) { }
 
   ngOnInit() {
     const id = +this.router.snapshot.paramMap.get('movieID');
